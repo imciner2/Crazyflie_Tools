@@ -16,6 +16,7 @@ Analysis of this part was done assuming it is printed by Shapeways, using the St
 The data about the material used can be found here: https://www.shapeways.com/rrstatic/material_docs/mds-strongflex.pdf
 
 The results of that analysis is as follows:
+
 | Property | Value    | Units  |
 | -------- | -------- | ------ |
 | Mass     | 1.38e-3  | kg     |
