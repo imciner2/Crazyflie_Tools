@@ -14,6 +14,15 @@ The frame here has been modified in 2 ways:
 
 Analysis of this part was done assuming it is printed by Shapeways, using the Strong & Flexible Plastic material.
 The data about the material used can be found here: https://www.shapeways.com/rrstatic/material_docs/mds-strongflex.pdf
+
+The results of that analysis is as follows:
+| Property | Value    | Units  |
+| -------- | -------- | ------ |
+| Mass     | 1.38e-3  | kg     |
+| Ixx      | 1.572e-6 | kg*m^2 |
+| Iyy      | 1.874e-6 | kg*m^2 |
+| Izz      | 3.445e-6 | kg*m^2 |
+
  
 ## Files
  * MassProperties-cg.pdf - Contains the mass & Moment of Inertia calculated for this part in units of grams and centimeters
