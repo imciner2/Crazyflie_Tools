@@ -1,0 +1,22 @@
+General Design:
+ * Input pins count number of falling edges on signal coming from the sensor (=2*rotor revolutions)
+ * Timer counts 1 second intervals, then reads from each interrupt counter, divides by 2 to get rotations per second
+ * 4 seconds worth of data is averaged together
+ * On button press, averaged value for each motor is displayed on UART terminal
+
+GPIO Requirements:
+ * 5V tolerant inputs
+ * Utilize pins connected to headers on Nucleo board
+ * Each input pin has its own interrupt for falling-edge trigger
+
+GPIO Selection:
+ * PA10 - D2 - Motor 1 - EXTI10
+ * PB5 - D4 - Motor 2 - EXTI5
+ * PB4 - D5 - Motor 3 - EXTI4
+ * PA8 - D8 - Motor 4 - EXTI8
+
+Timers:
+ * Count to 1 second
+ * Use TIMER2 - 32-bit timer
+ * Driven off of 84MHz clock
+ * To count to 1 second, with prescaler of 1, 84000000 is the ARR value
