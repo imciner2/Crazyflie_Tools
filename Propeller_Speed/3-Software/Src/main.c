@@ -110,7 +110,7 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
-	  uint8_t button = HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin);
+	  uint8_t button = HAL_GPIO_ReadPin(LD2_GPIO_Port, LD2_Pin);
 
 	  if (pressed == 0 && button == 0) {
 		  // On a button press, set debounce flag
