@@ -49,6 +49,8 @@
 #define USART_RX_GPIO_Port GPIOA
 #define LD2_Pin GPIO_PIN_5
 #define LD2_GPIO_Port GPIOA
+#define Timer_Indicator_Pin GPIO_PIN_10
+#define Timer_Indicator_GPIO_Port GPIOB
 #define Motor_4_Pin GPIO_PIN_8
 #define Motor_4_GPIO_Port GPIOA
 #define Motor_1_Pin GPIO_PIN_10

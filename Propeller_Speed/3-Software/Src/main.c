@@ -38,6 +38,8 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
+#include <string.h>
+#include "interruptHandlers.h"
 
 /* USER CODE END Includes */
 
@@ -45,6 +47,12 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
+
+// Temp array to use for string generation
+uint8_t tempArray[255];
+
+// Variable to debounce the button
+uint8_t pressed = 0;
 
 /* USER CODE END PV */
 
@@ -83,9 +91,14 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 
+  // Add the callbacks for the EXTI interrupts
+
   char* message = "Hello World\r\n";
 
   HAL_UART_Transmit(&huart2, (uint8_t*) message, strlen(message), 1000);
+
+  // Start the timer
+  HAL_TIM_Base_Start_IT(&htim2);
 
   /* USER CODE END 2 */
 
@@ -98,7 +111,22 @@ int main(void)
   /* USER CODE BEGIN 3 */
 
 	  uint8_t button = HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin);
-	  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, button);
+
+	  if (pressed == 0 && button == 0) {
+		  // On a button press, set debounce flag
+		  pressed = 1;
+
+		  // Create a string of all the average values and then send it over UART2
+		  sprintf((char*) tempArray, "%d, %d, %d, %d\r\n", averageValues[0],
+				  	  	  	  	  	  	  	  	  	  	   averageValues[1],
+														   averageValues[2],
+														   averageValues[3]);
+
+		  HAL_UART_Transmit(&huart2, tempArray, strlen((char*) tempArray), 1000);
+	  } else if (button == 1) {
+		  // Reset debounce flag once button is depressed
+		  pressed = 0;
+	  }
   }
   /* USER CODE END 3 */
 
