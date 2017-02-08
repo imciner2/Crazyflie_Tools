@@ -31,12 +31,10 @@
   ******************************************************************************
   */
 /* Includes ------------------------------------------------------------------*/
-
-#include "stm32f401xe.h"
 #include "main.h"
 #include "stm32f4xx_hal.h"
-#include "stm32f4xx_hal_conf.h"
 #include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
@@ -81,8 +79,13 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM2_Init();
+  MX_USART2_UART_Init();
 
   /* USER CODE BEGIN 2 */
+
+  char* message = "Hello World\r\n";
+
+  HAL_UART_Transmit(&huart2, (uint8_t*) message, strlen(message), 1000);
 
   /* USER CODE END 2 */
 
@@ -94,6 +97,8 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
+	  uint8_t button = HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin);
+	  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, button);
   }
   /* USER CODE END 3 */
 
