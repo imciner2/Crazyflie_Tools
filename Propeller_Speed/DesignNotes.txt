@@ -13,7 +13,7 @@ GPIO Selection:
  * PA10 - D2 - Motor 1 - EXTI10 - Rising edge trigger
  * PB5 - D4 - Motor 2 - EXTI5 - Rising edge trigger
  * PB4 - D5 - Motor 3 - EXTI4 - Rising edge trigger
- * PA8 - D8 - Motor 4 - EXTI8 - Rising edge trigger
+ * PA8 - D7 - Motor 4 - EXTI8 - Rising edge trigger
  * PB10 - D6 - Timer Indicator - Will toggle when timer interrupt runs
 
 Timers:

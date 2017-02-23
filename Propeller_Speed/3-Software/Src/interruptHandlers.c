@@ -11,7 +11,7 @@
 
 #include <stdint.h>
 
-#define NUM_AVERAGE 4
+#define NUM_AVERAGE 1
 
 // Array to hold the circular buffer of speed values
 volatile uint32_t shadowValues[NUM_AVERAGE][4];
@@ -50,28 +50,33 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 		// Toggle the LED and another pin just to make sure
 		HAL_GPIO_TogglePin(Timer_Indicator_GPIO_Port, Timer_Indicator_Pin);
 		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-
+/*
 		// Copy the motor counts and make them propeller turns
 		shadowValues[currentIndex][0] = (motor1_cnt >> 1);
 		shadowValues[currentIndex][1] = (motor2_cnt >> 1);
 		shadowValues[currentIndex][2] = (motor3_cnt >> 1);
 		shadowValues[currentIndex][3] = (motor4_cnt >> 1);
+*/
+		averageValues[0] = (motor1_cnt >> 1);
+		averageValues[1] = (motor2_cnt >> 1);
+		averageValues[2] = (motor3_cnt >> 1);
+		averageValues[3] = (motor4_cnt >> 1);
 
 		// Zero out the counter
 		motor1_cnt = 0;
 		motor2_cnt = 0;
 		motor3_cnt = 0;
 		motor4_cnt = 0;
-
+/*
 		// Increment the current index and keep it between 0 and NUM_AVERAGE
 		currentIndex++;
 		currentIndex = currentIndex % NUM_AVERAGE;
 
 		// Average the current measurements in the circular buffer
-		averageValues[0] = 0;
-		averageValues[1] = 0;
-		averageValues[2] = 0;
-		averageValues[3] = 0;
+		averageValues[0] = shadowValues[0][0];
+		averageValues[1] = shadowValues[0][1];
+		averageValues[2] = shadowValues[0][2];
+		averageValues[3] = shadowValues[0][3];
 
 		for (uint8_t i = 0; i < NUM_AVERAGE; i++) {
 			averageValues[0] += shadowValues[i][0];
@@ -84,5 +89,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 		averageValues[1] = averageValues[1]/NUM_AVERAGE;
 		averageValues[2] = averageValues[2]/NUM_AVERAGE;
 		averageValues[3] = averageValues[3]/NUM_AVERAGE;
+		*/
 	}
 }
