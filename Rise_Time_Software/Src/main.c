@@ -123,7 +123,7 @@ int main(void)
 
 		if ( cycled_once == 1 && ready) {
 			// Access 50 back to see if the value has changed enough
-			int16_t pastIndex = currentIndex - 600;
+			int16_t pastIndex = currentIndex - 1250;
 			if (pastIndex < 0) {
 				pastIndex = LENGTH_ROTOR_TIMES + pastIndex;
 			}

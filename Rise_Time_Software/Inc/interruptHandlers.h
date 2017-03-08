@@ -10,8 +10,8 @@
 
 #include <stdint.h>
 
-#define LENGTH_ROTOR_TIMES 1024
-#define TRIGGER 50000
+#define LENGTH_ROTOR_TIMES 2048
+#define TRIGGER 100000
 
 // The averaged motor speeds
 extern volatile uint32_t rotorTimes[LENGTH_ROTOR_TIMES];
