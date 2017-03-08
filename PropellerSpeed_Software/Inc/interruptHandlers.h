@@ -13,6 +13,11 @@
 // The averaged motor speeds
 extern volatile uint32_t averageValues[4];
 
+extern volatile uint32_t motor1_cnt;
+extern volatile uint32_t motor2_cnt;
+extern volatile uint32_t motor3_cnt;
+extern volatile uint32_t motor4_cnt;
+
 // Callback for the GPIO interrupts
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_pin);
 

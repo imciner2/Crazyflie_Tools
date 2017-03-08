@@ -28,6 +28,7 @@ volatile uint32_t motor2_cnt = 0;
 volatile uint32_t motor3_cnt = 0;
 volatile uint32_t motor4_cnt = 0;
 
+/*
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_pin) {
 	// Depending upon which pin triggered, increment the count
 	if (GPIO_pin == Motor_1_Pin) {
@@ -39,7 +40,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_pin) {
 	} else if (GPIO_pin == Motor_4_Pin) {
 		motor4_cnt++;
 	}
-}
+}*/
 
 /**
  * This is a callback for when the timer period elapses

@@ -36,6 +36,7 @@
 #include "stm32f4xx_it.h"
 
 /* USER CODE BEGIN 0 */
+#include "interruptHandlers.h"
 
 /* USER CODE END 0 */
 
@@ -74,6 +75,9 @@ void SysTick_Handler(void)
 void EXTI4_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI4_IRQn 0 */
+  __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_4);
+  motor3_cnt++;
+  return;
 
   /* USER CODE END EXTI4_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_4);
@@ -88,6 +92,16 @@ void EXTI4_IRQHandler(void)
 void EXTI9_5_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
+  if (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_5) != RESET) {
+	// EXT5 pin
+    __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_5);
+    motor2_cnt++;;
+  } else {
+    __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_8);
+    // EXTI8 pin
+    motor4_cnt++;
+  }
+  return;
 
   /* USER CODE END EXTI9_5_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_5);
@@ -117,6 +131,12 @@ void TIM2_IRQHandler(void)
 void EXTI15_10_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
+  if (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_10) != RESET) {
+    // EXT10 pin
+    __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_10);
+	motor1_cnt++;;
+  }
+  return;
 
   /* USER CODE END EXTI15_10_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_10);
