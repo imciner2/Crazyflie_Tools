@@ -1,4 +1,4 @@
-update=Wed 18 Jan 2017 08:39:07 PM CST
+update=Mon 15 May 2017 10:41:10 PM CDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,18 +27,18 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../KiCad-Libraries/symbols
+LibDir=
 [eeschema/libraries]
-LibName1=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/Amplifiers
-LibName2=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/Connectors
-LibName3=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/DataStorage
-LibName4=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/Diodes
-LibName5=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/Microprocessors
-LibName6=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/MiscellaneousDevices
-LibName7=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/Passives
-LibName8=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/PMOD
-LibName9=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/PowerComponents
-LibName10=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/RepeaterParts
-LibName11=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/RF_OEM_Parts
-LibName12=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/Sensors
-LibName13=/home/imcinerney/Documents/Github/Crazyflie_Tools/Propeller_Speed/2-Hardware/KiCad-Libraries/symbols/TransistorParts
+LibName1=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/Amplifiers
+LibName2=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/Connectors
+LibName3=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/DataStorage
+LibName4=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/Diodes
+LibName5=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/Microprocessors
+LibName6=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/MiscellaneousDevices
+LibName7=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/Passives
+LibName8=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/PMOD
+LibName9=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/PowerComponents
+LibName10=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/RepeaterParts
+LibName11=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/RF_OEM_Parts
+LibName12=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/Sensors
+LibName13=/home/imcinerney/Documents/Github/Crazyflie_Tools/PropellerSpeed_Hardware/2-Hardware/KiCad-Libraries/symbols/TransistorParts
